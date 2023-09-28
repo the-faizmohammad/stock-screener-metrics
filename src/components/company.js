@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchStockScreenerData, searchCompany } from '../redux/stockScreener/StockScreenersSlice';
 import Search from './Search';
-import Footer from './Footer';
+import Footer from './Footer.js';
 import CompanyCard from './CompanyCard';
 import './Company.css';
 
