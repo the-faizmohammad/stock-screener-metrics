@@ -12,3 +12,48 @@ export const fetchStockScreenerData = createAsyncThunk(
     }
   },
 );
+fetchStockScreenerData();
+
+const stockScreenersSlice = createSlice({
+  name: 'stockScreeners',
+  initialState: {
+    stockScreenerData: [],
+    selectedCompany: [],
+    searchStockCompany: [],
+    loading: false,
+    error: null,
+  },
+  reducers: {
+    setStockScreenerData: (state, action) => {
+      state.stockScreenerData = action.payload;
+    },
+    selectCompany: (state, action) => {
+      state.selectedCompany = action.payload;
+    },
+    searchCompany: (state, action) => {
+      const searchValue = action.payload.toLowerCase();
+      state.searchStockCompany = state.stockScreenerData.filter(
+        (screener) => screener.companyName.toLowerCase().includes(searchValue),
+      );
+    },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchStockScreenerData.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchStockScreenerData.fulfilled, (state, action) => {
+        state.loading = false;
+        state.stockScreenerData = action.payload;
+        state.searchStockCompany = action.payload;
+      })
+      .addCase(fetchStockScreenerData.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      });
+  },
+});
+
+export const { setStockScreenerData, selectCompany, searchCompany } = stockScreenersSlice.actions;
+export default stockScreenersSlice.reducer;
