@@ -1,11 +1,19 @@
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Screeners from './routes/Screeners';
+import Home from "./routes/Home";
+import Navigation from "./components/Navigation";
+
 
 function App() {
   return (
-    <div className="App">
-      this is stock screener
-    </div>
-  );
+    <BrowserRouter>
+    <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Screeners" element={<Screeners />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
