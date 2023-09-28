@@ -1,4 +1,4 @@
-import Company from '../components/Company';
+import Company from '.';
 
 function Home() {
   return (
