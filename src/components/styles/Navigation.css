@@ -1,6 +1,8 @@
 .subject {
   font-family: 'Papyrus', fantasy, sans-serif;
-  font-size: 28px;
+  font-size: 36px;
+  color: navy;
+  font-weight:bolder;
 }
 
 .nav-bar {
