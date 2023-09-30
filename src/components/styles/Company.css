@@ -10,7 +10,7 @@ body {
   height: 100%;
   width: 90%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
   grid-gap: 5px;
   margin: 0 auto;
   padding-top: 1rem;
@@ -22,6 +22,20 @@ body {
   text-align: center;
   padding-top: 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+.company-card:nth-child(8n + 2),
+.company-card:nth-child(8n + 3),
+.company-card:nth-child(8n + 6),
+.company-card:nth-child(8n + 7) {
+  background-color: #aed0f1;
+}
+
+.company-card:nth-child(8n + 1),
+.company-card:nth-child(8n + 4),
+.company-card:nth-child(8n + 5),
+.company-card:nth-child(8n + 8) {
+  background-color: aquamarine;
 }
 
 .company-card li {
