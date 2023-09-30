@@ -1,0 +1,62 @@
+.screenersList {
+  width: 90%;
+  height: 390px;
+  margin: 20px auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+.screenersList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.screenersList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.screenersList .innerList {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.screenersList .innerList li {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.screenersList .innerList li:first-child {
+  background-color: #c5d9ed;
+}
+
+.back-icon {
+  padding-top: 20px;
+  margin-left: 25px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.screenersContain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .screenersList {
+    width: 60%;
+    height: 390px;
+    margin: 20px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+  }
+}

@@ -1,10 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
-import stockScreenersReducer from './stockScreenersSlice';
+import { combineReducers } from '@reduxjs/toolkit';
+import stockScreenerReducer from './stockScreener/StockScreenersSlice';
 
-const store = configureStore({
-  reducer: {
-    stockScreeners: stockScreenersReducer,
-  },
+const rootReducer = combineReducers({
+  stockScreeners: stockScreenerReducer,
 });
 
-export default store;
+export default rootReducer;

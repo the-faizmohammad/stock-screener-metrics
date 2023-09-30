@@ -1,7 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-export const fetchStockScreenerData = createAsyncThunk(
+export const fetchStockScreener = createAsyncThunk(
   'stockScreeners/fetchStockScreener',
   async () => {
     try {
@@ -13,47 +12,46 @@ export const fetchStockScreenerData = createAsyncThunk(
     }
   },
 );
+fetchStockScreener();
 
-const stockScreenersSlice = createSlice({
+const StockScreenersSlice = createSlice({
   name: 'stockScreeners',
   initialState: {
-    stockScreenerData: [],
+    stockScreener: [],
     selectedCompany: [],
     searchStockCompany: [],
-    loading: false,
-    error: null,
   },
   reducers: {
-    setStockScreenerData: (state, action) => {
-      state.stockScreenerData = action.payload;
-    },
+    setStockScreener: (state, action) => action.payload,
     selectCompany: (state, action) => {
       state.selectedCompany = action.payload;
     },
+
     searchCompany: (state, action) => {
       const searchValue = action.payload.toLowerCase();
-      state.searchStockCompany = state.stockScreenerData.filter(
+      state.searchStockCompany = state.stockScreener.filter(
         (screener) => screener.companyName.toLowerCase().includes(searchValue),
       );
     },
   },
+
   extraReducers: (builder) => {
     builder
-      .addCase(fetchStockScreenerData.pending, (state) => {
+      .addCase(fetchStockScreener.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchStockScreenerData.fulfilled, (state, action) => {
+      .addCase(fetchStockScreener.fulfilled, (state, action) => {
         state.loading = false;
-        state.stockScreenerData = action.payload;
+        state.stockScreener = action.payload;
         state.searchStockCompany = action.payload;
       })
-      .addCase(fetchStockScreenerData.rejected, (state, action) => {
+      .addCase(fetchStockScreener.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });
   },
 });
 
-export const { setStockScreenerData, selectCompany, searchCompany } = stockScreenersSlice.actions;
-export default stockScreenersSlice.reducer;
+export const { selectCompany, searchCompany } = StockScreenersSlice.actions;
+export default StockScreenersSlice.reducer;

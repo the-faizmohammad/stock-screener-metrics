@@ -1,30 +1,48 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchStockScreenerData, searchCompany } from '../redux/stockScreener/StockScreenersSlice';
+import { Link } from 'react-router-dom';
+import { fetchStockScreener, selectCompany } from '../redux/stockScreener/StockScreenersSlice';
 import Search from './Search';
-import Footer from './Footer.js';
-import CompanyCard from './CompanyCard';
-import './Company.css';
+import './styles/Company.css';
 
-function Company() {
+const Company = () => {
   const dispatch = useDispatch();
   const stockScreeners = useSelector((state) => state.stockScreeners);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        await dispatch(fetchStockScreenerData());
-        setIsLoading(false);
-      } catch (error) {
-        setIsLoading(false);
-      }
+      setIsLoading(true);
+      dispatch(fetchStockScreener());
+      setIsLoading(false);
     };
     fetchData();
   }, [dispatch]);
 
-  const handleSearch = (searchValue) => {
-    dispatch(searchCompany(searchValue.toLowerCase()));
+  const renderCompanyCards = () => {
+    if (isLoading) {
+      return <p>Loading...</p>;
+    }
+
+    if (!Array.isArray(stockScreeners.searchStockCompany)) {
+      return null;
+    }
+
+    return stockScreeners.searchStockCompany.map((screener) => (
+      <div className="company-card" key={screener.symbol}>
+        <Link
+          to="/Screeners"
+          onClick={() => dispatch(selectCompany(screener))}
+        >
+          <ul className="company-list" key={screener.symbol}>
+            <li className="companySymbol">{screener.symbol}</li>
+            <li className="company-details">{screener.country}</li>
+            <li className="company-details">{screener.companyName}</li>
+            <li className="company-details">{screener.sector}</li>
+          </ul>
+        </Link>
+      </div>
+    ));
   };
 
   return (
@@ -32,21 +50,12 @@ function Company() {
       <ul className="nav-bar">
         <li className="subject">Stock Screener</li>
         <li>
-          <Search onSearch={handleSearch} />
+          <Search />
         </li>
       </ul>
-      <div className="companyContainer">
-        {isLoading ? (
-          <p>Loading...</p>
-        ) : (
-          stockScreeners.searchStockCompany.map((screener) => (
-            <CompanyCard key={screener.symbol} screener={screener} />
-          ))
-        )}
-      </div>
-      <Footer />
+      <div className="companyContainer">{renderCompanyCards()}</div>
     </div>
   );
-}
+};
 
 export default Company;

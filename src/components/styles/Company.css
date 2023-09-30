@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #646970;
+  background-color: #f0f6fc;
+}
+
+.companyContainer {
+  height: 100%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 5px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.company-card {
+  width: 100%;
+  height: 180px;
+  text-align: center;
+  padding-top: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+
+.company-card li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.company-card:hover {
+  transform: translateY(-2px);
+}
+
+a {
+  text-decoration: none;
+  color: #646970;
+}
+
+.company-list {
+  list-style: none;
+  padding: 0;
+}
+
+.companySymbol {
+  font-family: 'stencil Std, fantasy', sans-serif;
+  font-size: 24px;
+}
+
+.company-details {
+  font-family: sans-serif;
+}
