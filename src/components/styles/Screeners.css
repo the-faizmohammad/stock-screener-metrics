@@ -17,7 +17,7 @@
 }
 
 .back-icon:hover {
-  transform: scale(1.2); 
+  transform: scale(1.2);
   color: #ff5722;
 }
 
@@ -69,12 +69,10 @@
 .screenersListItems li::after {
   margin-left: 5px;
   font-weight: bold;
-
 }
 
 .screenersListItems li:nth-child(odd) {
   background-color: aquamarine;
-
 }
 
 .screenersListItems li:nth-child(even) {
