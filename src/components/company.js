@@ -48,7 +48,7 @@ const Company = () => {
   return (
     <div className="navigation">
       <ul className="nav-bar">
-        <li className="subject">Stock Screener</li>
+        <li className="subject">Global Stock Screener</li>
         <li>
           <Search />
         </li>

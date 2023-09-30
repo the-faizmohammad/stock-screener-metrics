@@ -32,28 +32,28 @@ function Screeners() {
         </div>
         <ul className="screenersListItems">
           <li>
-            Price:
-            {stockScreeners.price}
+            <span className="label">Price:</span>
+            <span className="value">{stockScreeners.price}</span>
           </li>
           <li>
-            Volume:
-            {stockScreeners.volume}
+            <span className="label">Volume:</span>
+            <span className="value">{stockScreeners.volume}</span>
           </li>
           <li>
-            Market Cap:
-            {stockScreeners.marketCap}
+            <span className="label">Market Cap:</span>
+            <span className="value">{stockScreeners.marketCap}</span>
           </li>
           <li>
-            Last Annual Dividend:
-            {stockScreeners.lastAnnualDividend}
+            <span className="label">Last Annual Dividend:</span>
+            <span className="value">{stockScreeners.lastAnnualDividend}</span>
           </li>
           <li>
-            Exchange:
-            {stockScreeners.exchange}
+            <span className="label">Exchange:</span>
+            <span className="value">{stockScreeners.exchange}</span>
           </li>
           <li>
-            Beta:
-            {stockScreeners.beta}
+            <span className="label">Beta:</span>
+            <span className="value">{stockScreeners.beta}</span>
           </li>
         </ul>
 
