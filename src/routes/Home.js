@@ -5,6 +5,7 @@ function Home() {
   return (
     <div>
       <Company />
+
       <Footer />
     </div>
   );
