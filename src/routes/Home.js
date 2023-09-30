@@ -6,7 +6,6 @@ function Home() {
     <div>
       <Company />
       <Footer />
-
     </div>
   );
 }
