@@ -1,5 +1,5 @@
 # Stock Screeners
-### See stock data like price and Volume
+See stock data like price and Volume
 
 <a name="readme-top"></a>
 
