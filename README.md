@@ -21,6 +21,8 @@
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
 - [👥 Authors](#authors)
+- [👥 Live Demo](#live-demo)
+- - [👥 Video-Walkthrough](#video-walktrhough)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -86,6 +88,18 @@ Must-Install-Project-with-the-Following-Programmes:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Live Demo <a name="live-demo">
+https://global-stock-screener.onrender.com
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚀 Loom Video Walkthrough <a name="video-walkthrough"></a>
+
+- [Loom Video Walkthrough](https://www.loom.com/share/9d3ff1f01ff942e481c790bc9cb9fb7f?sid=32f7e238-473e-462d-9014-cde462f62687)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Faiz Mohammad**
@@ -119,7 +133,7 @@ people.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank...
+I would like to thank Original design idea by Nelson Sakwa on Behance.
 
 - Microverse Review Team
 - My Coding Partners
