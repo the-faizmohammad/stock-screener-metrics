@@ -54,7 +54,7 @@ To get a local copy up and running, follow these steps:
 
 - Open your Terminal in your VSCode.
 - Navigate to the desired directory [folder] to which you want to clone the repository to
-- [Copy & Paste] the Git clone you find in the code button (https://github.com/paulshaun-kdtk/Group_Capstone_Space_Travellers.git) into your terminal and press [Enter]
+- [Copy & Paste] the Git clone you find in the code button (https://github.com/the-faizmohammad/stock-screeners-metrics.git) into your terminal and press [Enter]
 - run using "npm start" in your terminal
 
 ### Prerequisites
