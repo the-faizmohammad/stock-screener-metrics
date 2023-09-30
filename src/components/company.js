@@ -37,7 +37,7 @@ const Company = () => {
           <ul className="company-list" key={screener.symbol}>
             <li className="companySymbol">{screener.symbol}</li>
             <li className="company-details">{screener.country}</li>
-            <li className="company-details">{screener.companyName}</li>
+            <li className="company-name">{screener.companyName}</li>
             <li className="company-details">{screener.sector}</li>
           </ul>
         </Link>

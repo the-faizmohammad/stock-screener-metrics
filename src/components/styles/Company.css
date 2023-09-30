@@ -66,5 +66,14 @@ a {
 
 .company-details {
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 20px;
+  color: black;
+
+}
+
+.company-name {
+  font-family: 'stencil Std, fantasy', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: navy;
 }
