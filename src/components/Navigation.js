@@ -17,7 +17,7 @@ const Navigation = () => (
           Most Viewed
         </li>
         <li className="custom-header-list">
-          <h1>Stock Screener</h1>
+          <h1>STOCK SCREENER</h1>
         </li>
         <li className="custom-header-list custom-icons-class">
           <FaMicrophone className="custom-icon" />
