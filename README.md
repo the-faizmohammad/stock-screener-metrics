@@ -22,7 +22,7 @@ See stock data like price and Volume
   - [Prerequisites](#prerequisites)
 - [👥 Authors](#authors)
 - [👥 Live Demo](#live-demo)
-- - [👥 Video-Walkthrough](#video-walktrhough)
+- [👥 Video-Walkthrough](#video-walktrhough)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
