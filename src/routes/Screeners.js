@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { HiChevronLeft } from 'react-icons/hi2';
-import { Link } from 'react-router-dom';
+import { ImStatsDots } from 'react-icons/im';
 import { fetchStockScreener } from '../redux/stockScreener/StockScreenersSlice';
 import '../components/styles/Screeners.css';
 
-function Screeners() {
+const Screeners = () => {
   const stockScreeners = useSelector((state) => state.stockScreeners.selectedCompany);
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
@@ -13,8 +12,11 @@ function Screeners() {
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-      dispatch(fetchStockScreener());
-      setIsLoading(false);
+      try {
+        await dispatch(fetchStockScreener());
+      } finally {
+        setIsLoading(false);
+      }
     };
     fetchData();
   }, [dispatch]);
@@ -22,44 +24,43 @@ function Screeners() {
   return (
     <div className="screenersContain">
       {isLoading && <div>Loading...</div>}
-      <Link className="back-icon" to="/">
-        <HiChevronLeft />
-      </Link>
-      <div key={stockScreeners.symbol} className="screenersList">
-        <div className="screenersListHeader">
-          <p>{stockScreeners.symbol}</p>
-          <p>{stockScreeners.companyName}</p>
-        </div>
-        <ul className="screenersListItems">
-          <li>
-            <span className="label">Price:</span>
-            <span className="value">{stockScreeners.price}</span>
-          </li>
-          <li>
-            <span className="label">Volume:</span>
-            <span className="value">{stockScreeners.volume}</span>
-          </li>
-          <li>
-            <span className="label">Market Cap:</span>
-            <span className="value">{stockScreeners.marketCap}</span>
-          </li>
-          <li>
-            <span className="label">Last Annual Dividend:</span>
-            <span className="value">{stockScreeners.lastAnnualDividend}</span>
-          </li>
-          <li>
-            <span className="label">Exchange:</span>
-            <span className="value">{stockScreeners.exchange}</span>
-          </li>
-          <li>
-            <span className="label">Beta:</span>
-            <span className="value">{stockScreeners.beta}</span>
-          </li>
-        </ul>
-
+      <div className="details__ul">
+        <li className="li-item name">
+          <div className="icon">
+            <ImStatsDots />
+          </div>
+          <div className="name-div">{stockScreeners.companyName}</div>
+        </li>
+        <li className="li-item details">
+          <div className="details-div">STOCK DETAILS</div>
+        </li>
+        <li className="li-item">
+          <span className="left">Price: </span>
+          <div className="right">{stockScreeners.price}</div>
+        </li>
+        <li className="li-item">
+          <span className="left">Volume: </span>
+          <div className="right">{stockScreeners.volume}</div>
+        </li>
+        <li className="li-item">
+          <span className="left">Market Cap: </span>
+          <div className="right">{stockScreeners.marketCap}</div>
+        </li>
+        <li className="li-item">
+          <span className="left">Last Annual Dividend: </span>
+          <div className="right">{stockScreeners.lastAnnualDividend}</div>
+        </li>
+        <li className="li-item">
+          <span className="left">Exchange: </span>
+          <div className="right">{stockScreeners.exchange}</div>
+        </li>
+        <li className="li-item">
+          <span className="left">Beta: </span>
+          <div className="right">{stockScreeners.beta}</div>
+        </li>
       </div>
     </div>
   );
-}
+};
 
 export default Screeners;

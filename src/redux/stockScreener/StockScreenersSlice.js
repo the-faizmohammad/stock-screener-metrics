@@ -12,7 +12,6 @@ export const fetchStockScreener = createAsyncThunk(
     }
   },
 );
-fetchStockScreener();
 
 const StockScreenersSlice = createSlice({
   name: 'stockScreeners',
@@ -20,13 +19,17 @@ const StockScreenersSlice = createSlice({
     stockScreener: [],
     selectedCompany: [],
     searchStockCompany: [],
+    loading: false,
+    error: null,
   },
   reducers: {
-    setStockScreener: (state, action) => action.payload,
+    setStockScreener: (state, action) => ({
+      ...state,
+      stockScreener: action.payload,
+    }),
     selectCompany: (state, action) => {
       state.selectedCompany = action.payload;
     },
-
     searchCompany: (state, action) => {
       const searchValue = action.payload.toLowerCase();
       state.searchStockCompany = state.stockScreener.filter(
@@ -41,17 +44,18 @@ const StockScreenersSlice = createSlice({
         state.loading = true;
         state.error = null;
       })
-      .addCase(fetchStockScreener.fulfilled, (state, action) => {
-        state.loading = false;
-        state.stockScreener = action.payload;
-        state.searchStockCompany = action.payload;
-      })
+      .addCase(fetchStockScreener.fulfilled, (state, action) => ({
+        ...state,
+        loading: false,
+        stockScreener: action.payload,
+        searchStockCompany: action.payload,
+      }))
       .addCase(fetchStockScreener.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.error.message;
+        state.error = action.error ? action.error.message : 'An error occurred';
       });
   },
 });
 
-export const { selectCompany, searchCompany } = StockScreenersSlice.actions;
+export const { setStockScreener, selectCompany, searchCompany } = StockScreenersSlice.actions;
 export default StockScreenersSlice.reducer;
