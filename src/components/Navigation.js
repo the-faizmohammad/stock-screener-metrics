@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import { FaLessThan, FaMicrophone } from 'react-icons/fa';
 import { FiSettings } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import './styles/Navigation.css';
 
 const Navigation = () => (
@@ -9,7 +10,10 @@ const Navigation = () => (
     <nav>
       <ul className="custom-nav-links">
         <li>
-          <FaLessThan className="custom-icon lessthan" />
+          <Link to="/">
+            <FaLessThan className="custom-icon lessthan" />
+            {' '}
+          </Link>
           Most Viewed
         </li>
         <li className="custom-header-list">

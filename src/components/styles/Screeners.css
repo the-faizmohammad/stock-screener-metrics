@@ -1,80 +1,77 @@
-.screenersContain {
+.details__ul {
+  list-style-type: none;
+  color: #fff;
+}
+
+.details__ul .li-item {
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
-.back-icon {
-  text-decoration: none;
-  color: navy;
-  font-size: 24px;
-  margin-bottom: 20px;
-  transition: transform 0.2s ease-in-out;
-  background-color: aquamarine;
-  font-weight: bolder;
-  width: 30px;
+.details__ul .li-item .left {
+  width: 30%;
+  font-weight: 900;
 }
 
-.back-icon:hover {
-  transform: scale(1.2);
-  color: #ff5722;
+.details__ul .li-item .right {
+  width: 66%;
+  text-align: right;
 }
 
-.screenersList {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  max-height: 800px;
+.details__ul .li-item .description-text {
+  text-align: justify;
 }
 
-.screenersListHeader {
+.details__ul .li-item a {
+  color: #fff;
+}
+
+.details__ul .li-item a:hover {
+  color: orange;
+}
+
+.details__ul .li-item a:active {
+  color: #ffe760;
+}
+
+.details__ul .li-item:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.details__ul .name {
+  display: flex;
+  align-items: center;
+  padding: 3rem 3rem;
+  background-color: #578ef4;
+}
+
+.details__ul .name .icon {
+  font-size: 6rem;
+  color: #304b7e;
+  width: 50%;
+  text-align: right;
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.details__ul .name .name-div {
+  width: 50%;
+  padding-right: 4rem;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.details__ul .details {
+  height: 0.2rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding: 1.4rem;
   text-align: center;
-  margin-bottom: 20px;
-}
-
-.screenersListHeader p {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.screenersListItems {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.screenersListItems li {
-  font-size: 24px;
-  margin: 10px 0;
-  padding: 18px 28px;
-  color: navy;
-}
-
-.label {
-  font-weight: bold;
-  margin-right: 20px;
-}
-
-.value {
-  font-weight: normal;
-}
-
-.screenersListItems li::after {
-  margin-left: 5px;
-  font-weight: bold;
-}
-
-.screenersListItems li:nth-child(odd) {
-  background-color: aquamarine;
-}
-
-.screenersListItems li:nth-child(even) {
-  background-color: #aed0f1;
+  display: flex;
+  justify-content: center;
+  background-color: #304b7e !important;
 }

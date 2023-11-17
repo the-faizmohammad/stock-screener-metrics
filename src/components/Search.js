@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import { MdQueryStats } from 'react-icons/md';
 import { searchCompany } from '../redux/stockScreener/StockScreenersSlice';
 import './styles/Search.css';
 
@@ -11,12 +12,23 @@ function Search() {
   };
 
   return (
-    <input
-      className="search"
-      type="text"
-      placeholder="Search company..."
-      onChange={searchQuery}
-    />
+    <section className="companies-container">
+      <div className="company-item">
+        <div className="company-header">
+          <div className="title-icon">
+            <MdQueryStats className="icon" />
+          </div>
+          <h1>NASDAQ&apos;S STOCK PERFORMANCE</h1>
+        </div>
+        <p className="company-subtitle">STATS BY COMPANY</p>
+        <input
+          className="input"
+          type="text"
+          placeholder="Search company..."
+          onChange={searchQuery}
+        />
+      </div>
+    </section>
   );
 }
 

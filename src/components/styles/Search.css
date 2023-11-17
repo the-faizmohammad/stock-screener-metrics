@@ -1,16 +1,37 @@
-.search {
-  justify-self: center;
-  border: 1px solid #ccc;
-  padding: 1.1rem 1.6rem;
-  font-size: 1.1rem;
-  border-radius: 0.7rem;
-  width: 80%;
-  height: 0.7rem;
-  transition: all 0.3s;
+.company-item {
+  color: #fff;
+
 }
 
-.search:focus {
-  outline: none;
-  box-shadow: 0 2.4rem 2.4rem rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
+  input {
+    width: 100%;
+    outline: none;
+    padding: 1rem;
+  }
+
+  .company-header {
+    display: flex;
+    align-items: center;
+    padding: 2rem 3rem;
+    background-color: #578ef4;
+  }
+
+    .title-icon {
+      width: 50%;
+      text-align: right;
+      margin-right: 2rem;
+    }
+
+      .icon {
+        font-size: 12rem;
+        color: #304b7e;
+      }
+
+
+    h1 {
+      width: 50%;
+      padding-right: 4rem;
+      font-size: 2rem;
+      font-weight: 900;
+    }
+  
