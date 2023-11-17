@@ -89,7 +89,7 @@ Must-Install-Project-with-the-Following-Programmes:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Live Demo <a name="live-demo">
--[Live Demo](https://6557d9fba318860008f7afff--ubiquitous-semolina-c34e0a.netlify.app/)
+-[Live Demo](https://ubiquitous-semolina-c34e0a.netlify.app/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
