@@ -1,18 +1,27 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Navbar } from 'react-bootstrap';
+import { FaLessThan, FaMicrophone } from 'react-icons/fa';
+import { FiSettings } from 'react-icons/fi';
 import './styles/Navigation.css';
 
-function Navigation() {
-  return (
-    <ul className="nav-bar">
-      <li className="subject">
-        <Link to="/" />
-      </li>
-      <li>
-        <Link to="/screeners" />
-      </li>
-      <li />
-    </ul>
-  );
-}
+const Navigation = () => (
+  <Navbar className="custom-navbar">
+    <nav>
+      <ul className="custom-nav-links">
+        <li>
+          <FaLessThan className="custom-icon lessthan" />
+          Most Viewed
+        </li>
+        <li className="custom-header-list">
+          <h1>Stock Screener</h1>
+        </li>
+        <li className="custom-header-list custom-icons-class">
+          <FaMicrophone className="custom-icon" />
+          <FiSettings className="custom-icon" />
+        </li>
+      </ul>
+    </nav>
+  </Navbar>
+);
 
 export default Navigation;

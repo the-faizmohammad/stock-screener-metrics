@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchStockScreener, selectCompany } from '../redux/stockScreener/StockScreenersSlice';
-import Search from './Search';
 import Footer from './Footer';
 import './styles/Company.css';
 
@@ -21,13 +20,7 @@ function Company() {
   }, [dispatch]);
 
   return (
-    <div className="navigation">
-      <ul className="nav-bar">
-        <li className="subject">Stock Screener</li>
-        <li>
-          <Search />
-        </li>
-      </ul>
+    <div>
       <div className="companyContainer">
         {isLoading && <p>Loading...</p>}
         {Array.isArray(stockScreeners.searchStockCompany)
