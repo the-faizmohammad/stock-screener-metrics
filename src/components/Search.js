@@ -18,9 +18,15 @@ function Search() {
           <div className="title-icon">
             <MdQueryStats className="icon" />
           </div>
-          <h1>NASDAQ&apos;S STOCK PERFORMANCE</h1>
+          <h1>STOCK PERFORMANCE</h1>
         </div>
-        <p className="company-subtitle">STATS BY COMPANY</p>
+        <p className="company-subtitle">
+          NASDAQ
+          {' '}
+          {'            '}
+          {' '}
+          WATCHLIST
+        </p>
         <input
           className="input"
           type="text"
