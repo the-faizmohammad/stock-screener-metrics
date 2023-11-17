@@ -9,8 +9,6 @@ See stock data like price and Volume
 
 </div>
 
-
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
