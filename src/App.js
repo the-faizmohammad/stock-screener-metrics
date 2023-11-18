@@ -9,10 +9,9 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Screeners" element={<Screeners />} />
+        <Route path="/Screeners/:companyId" element={<Screeners />} />
       </Routes>
     </BrowserRouter>
-
   );
 }
 
