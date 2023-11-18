@@ -94,7 +94,7 @@ Must-Install-Project-with-the-Following-Programmes:
 
 ## 🚀 Loom Video Walkthrough <a name="video-walkthrough"></a>
 
-- [Loom Video Walkthrough](https://www.loom.com/share/d17b64faf97743dfb222bcfdf2040fb4?sid=3e1974f5-c4b4-4000-baf5-70902ad5cb49)
+- [Loom Video Walkthrough](https://www.loom.com/share/5d4b5cb2835e46419887d49df4550995?sid=356be534-1778-4210-b28a-5e3b649d6d25)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
