@@ -103,7 +103,7 @@ Must-Install-Project-with-the-Following-Programmes:
 👤 **Faiz Mohammad**
 
 - GitHub: [@githubhandle](https://github.com/the-faizmohammad)
-- Twitter: [@gmail](email2faizm@gmail.com)
+- Twitter: [@twitterHandle](https://twitter.com/FaizMoh58742600)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/faiz-mohammad-967354142/)
 
 
