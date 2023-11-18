@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { ImStatsDots } from 'react-icons/im';
 import { fetchStockScreener } from '../redux/stockScreener/StockScreenersSlice';
 import '../components/styles/Screeners.css';
 
 const Screeners = () => {
+  const { companyId } = useParams();
   const stockScreeners = useSelector((state) => state.stockScreeners.selectedCompany);
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
@@ -13,13 +15,13 @@ const Screeners = () => {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        await dispatch(fetchStockScreener());
+        await dispatch(fetchStockScreener(companyId));
       } finally {
         setIsLoading(false);
       }
     };
     fetchData();
-  }, [dispatch]);
+  }, [dispatch, companyId]);
 
   return (
     <div className="screenersContain">

@@ -29,10 +29,12 @@ function Company() {
           && stockScreeners.searchStockCompany.map((screener) => (
             <div className="company-card" key={screener.symbol}>
               <div className="company-icons">
-                <div className="stats-icon"><ImStatsBars /></div>
+                <div className="stats-icon">
+                  <ImStatsBars />
+                </div>
               </div>
               <Link
-                to="/Screeners"
+                to={`/Screeners/${screener.companyId}`}
                 onClick={() => dispatch(selectCompany(screener))}
               >
                 <BsArrowRightCircle className="arrow-right" />
